@@ -20,6 +20,9 @@ export class User {
   @Column({ length: 100 })
   last_name: string;
 
+  @Column({ length: 30, unique: true })
+  username: string;
+
   @Column({ length: 150, unique: true })
   email: string;
 
@@ -32,7 +35,7 @@ export class User {
   @Column()
   city: string;
 
-  @Column({ nullable: true })
+  @Column({ length: 300, nullable: true })
   bio?: string;
 
   @ManyToOne(() => Role, (role) => role.users)
