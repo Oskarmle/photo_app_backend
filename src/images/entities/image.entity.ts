@@ -19,10 +19,10 @@ export class Image {
   @Column({ type: 'timestamp' })
   capture_time: Date;
 
-  @Column()
+  @Column({ type: 'double precision' })
   x_coordinate: number;
 
-  @Column()
+  @Column({ type: 'double precision' })
   y_coordinate: number;
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })

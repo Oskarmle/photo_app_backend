@@ -33,6 +33,9 @@ export class MockService implements OnApplicationBootstrap {
 
     // Create users
     await this.createUsers();
+
+    // Create images
+    await this.createImages();
   }
 
   async createRoles() {
